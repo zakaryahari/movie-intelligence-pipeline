@@ -24,3 +24,15 @@ def get_response_from_tmdb():
     response = requests.get(url, params=params)
 
     print("Status Code:", response.status_code)
+
+    if response.status_code == 200:
+        print("Success! We are in the matrix.")
+        data = response.json()
+        with open("data/processed/Movies_Api_Respond.json" , "w") as f :
+            json.dump(data, f, indent=4)
+    else:
+        print("Uh oh, something went wrong.")
+        print("Error:", response.text)
+
+
+get_response_from_tmdb()
