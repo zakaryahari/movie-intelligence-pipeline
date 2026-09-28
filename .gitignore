@@ -1,0 +1,18 @@
+# Security (Crucial!)
+.env
+
+# Virtual Environments
+venv/
+env/
+.venv/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Data (Never commit your datasets to Git!)
+data/raw/
+data/processed/
+
+# Machine Learning Models 
+models/
