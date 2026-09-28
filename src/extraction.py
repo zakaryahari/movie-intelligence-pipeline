@@ -14,3 +14,13 @@ def get_response_from_tmdb():
     BASE_URL = "https://api.themoviedb.org/3"
     endpoint = "/discover/movie"
     url = f"{BASE_URL}{endpoint}"
+
+    params = {
+        "api_key": API_KEY,
+        "language": "en-US",
+        "page": 1
+    }
+
+    response = requests.get(url, params=params)
+
+    print("Status Code:", response.status_code)
