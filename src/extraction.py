@@ -23,4 +23,13 @@ def get_response_from_tmdb():
             "language": "en-US",
             "page": current_page
         }
- 
+        try :
+            response = requests.get(url, params=params)
+            
+            print("Status Code:", response.status_code)
+    
+        except requests.exceptions.RequestException as e:
+            print("Request failed:", e)
+
+
+
