@@ -31,7 +31,7 @@ def get_response_from_tmdb():
             if response.status_code == 200:
                 print("Success! We are in the matrix.")
                 data = response.json()
-                with open("data/raw/Movies_Api_Respond_p"+str(current_page)+".json" , "w") as f :
+                with open("data/raw/D1/Movies_Api_Respond_p"+str(current_page)+".json" , "w") as f :
                     json.dump(data, f, indent=4)
             else:
                 print("Uh oh, something went wrong.")
